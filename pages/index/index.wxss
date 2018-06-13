@@ -1,0 +1,177 @@
+image {
+  width: 100%;
+}
+
+swiper {
+  height: 340rpx;
+}
+
+text {
+  line-height: 1;
+}
+
+.search-bar {
+  margin-bottom: 30rpx;
+  padding: 10rpx 20rpx;
+  background-color: #fff;
+}
+
+.search-bar input {
+  font: inherit;
+  border-radius: 50rpx;
+  padding: 10rpx 20rpx;
+  background-color: #fafafa;
+  border: 1rpx solid #eee;
+}
+
+.column-title {
+  background-color: #fff;
+  text-align: center;
+  padding: 30rpx;
+  font-size: 28rpx;
+  color: #666;
+}
+
+.column-wrapper {
+  margin-bottom: 30rpx;
+}
+
+.master-info {
+  border-top: 1rpx solid #efefef;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+  padding: 20rpx;
+  background-color: #fff;
+}
+
+.master-info image {
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 5%;
+}
+
+.master-brief {
+  padding-left: 20rpx;
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.master-user {
+  font-size: 30rpx;
+  letter-spacing: 1px;
+  margin-bottom: 8rpx;
+}
+
+.master-intro {
+  color: #666;
+  width: 400rpx;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.master-fans {
+  color: #888;
+}
+
+.master-follow {
+  color: #fff;
+  padding: 10rpx;
+  padding-right: 2rpx;
+  text-align: left;
+}
+
+.master-price {
+  color: #ffb000;
+  width: 240rpx;
+  text-align: center;
+  display: flex;
+}
+
+.master-amount {
+  padding-top: 28rpx;
+  text-align: right;
+  flex: 2;
+  padding-right: 10rpx;
+  font-size: 30rpx;
+}
+
+.master-book {
+  color: #fff;
+  width: 50rpx;
+  padding: 2rpx;
+  border-radius: 10rpx;
+  background-color: #ffb000;
+  /*border: 1px solid #ffb000;*/
+  text-align: center;
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  line-height: 1;
+  font-size: 26rpx;
+}
+
+.master-book view {
+  height: 40rpx;
+  line-height: 40rpx;
+}
+
+.pay-style {
+  background-color: #fff;
+  border-radius: 0 0 8rpx 8rpx;
+}
+
+.master-info.rate {
+  background-color: #f8f8f8;
+}
+
+.master-brief.m-rate {
+  border-right: 1px solid #ddd;
+}
+
+.item {
+  background-color: #fff;
+  padding: 0 40rpx;
+  height: 86rpx;
+  font-size: 16px;
+}
+
+.item .i-left {
+  padding: 28rpx 0;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  color: #333;
+  font-size: 26rpx;
+}
+
+.item .i-right {
+  line-height: 86rpx;
+  font-size: 26rpx;
+}
+
+.no-room {
+  text-align: center;
+  margin-top: 40rpx;
+}
+
+.no-room .r-pic {
+  height: 80rpx;
+  width: 80rpx;
+}
+
+.no-room .research {
+  margin: 20rpx;
+}
+
+.room-price {
+  margin-right: 4rpx;
+  font-size: 36rpx;
+  font-weight: normal;
+}

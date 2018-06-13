@@ -1,0 +1,35 @@
+page {
+    background-color: #f2f2f2;
+    color: #666;
+}
+
+.avatar {
+    height: 283rpx;
+    width: 302rpx;
+    margin: 0 auto 20rpx;
+    overflow: hidden;
+}
+
+.item-text{
+    font-size: 14px;
+    padding-top: 10rpx;
+}
+
+.wrap {
+    padding-top: 25%;
+}
+
+.info {
+    padding-top: 50rpx;
+    padding-bottom: 50rpx;
+    text-align: center;
+    font-size: 16px;
+}
+
+.btn-style {
+    background-color: #005589;
+    color: white;
+    text-align: center;
+    border-radius: 100rpx;
+    width: 350rpx;
+}

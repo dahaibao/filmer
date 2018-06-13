@@ -1,0 +1,42 @@
+<scroll-view scroll-y="true" style="height:100%;">
+    <swiper indicator-dots="{{indicatorDots}}" catchtap="previewHotelImage" circular="true">
+      <block>
+        <swiper-item>
+          <image src="/images/film1.jpg" mode="aspectFill" style="width:100%;height:100%" />
+        </swiper-item>
+        <swiper-item>
+            <image src="/images/film2.jpg" mode="aspectFill" style="width:100%;height:100%" />
+        </swiper-item>
+        <swiper-item>
+            <image src="/images/film3.jpg" mode="aspectFill" style="width:100%;height:100%" />
+        </swiper-item>
+      </block>
+    </swiper>
+
+    <view class="column-wrapper">
+      <block wx:if="{{roomTypes.length > 0}}">
+        <block wx:for="{{roomTypes}}" wx:key="code">
+          <view>
+            <view class="master-info room" data-master="room">
+              <image src="{{item.pictureURIs[0]}}" mode="scaleToFill" catchtap="previewRoomImage" data-code="{{item.code}}"></image>
+              <view class="master-brief" data-index="{{index}}" data-code="{{item.code}}" catchtap="showRoomInfo">
+                <view class="master-user">{{item.name}}</view>
+                <view class="master-intro">{{item.area}}平方米 {{item.bedType}} 最大入住:{{item.maxAdults}}人</view>
+                <view class="master-fans">宽带:{{item.internetType == '0'?'免费':'否'}}</view>
+              </view>
+              <view data-master="room" data-index="{{index}}" catchtap="hideAndShowRate" class="master-follow flex-row">
+                <view>
+                  <text class="color-text-info">{{item.rates[0].currency == 'CNY'?'￥':'USD'}}</text>
+                  <text class="bigText color-text-info room-price">{{item.cheapestAmount}}</text>
+                  <text class="color-text-tip2">起</text>
+                </view>
+                <image style="width:35rpx;height:35rpx;" src="/images/{{arrowStatus[index]}}.png" mode="scaleToFill"  />
+              </view>
+            </view>
+          </view>
+        </block>
+      </block>
+    </view>
+  </scroll-view>
+  <import src="/templates/footer.wxml"/>
+  <template is="footer"/>

@@ -1,0 +1,30 @@
+.tab-title {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+}
+
+.zan-cell {
+    padding: 10px 15px;
+}
+
+.zan-card {
+    padding: 10px 15px;
+}
+
+.zan-tab__title {
+    font-size: 16px;
+}
+
+.res-item {}
+
+.res-list {
+    padding-top: 45px;
+}
+
+.row-left {}
+
+.row-right {
+    float: right
+}

@@ -1,0 +1,14 @@
+<view class="wrap">
+    <view class="avatar">
+        <image src='/assets/images/authorize.jpg' style='width:302rpx;height:283rpx' />
+    </view>
+    <view class='info'>
+        <view>
+            <text class='zan-font-bold'>绑定微信登录</text> </view>
+        <view class='item-text'>
+            <text>授权通过将获取您微信的公开信息(昵称、头像等)</text> </view>
+    </view>
+    <view class="btn">
+        <button class="btn-style" open-type="getUserInfo" bindgetuserinfo="getuserinfo">登录</button>
+    </view>
+</view>

@@ -1,0 +1,11 @@
+<template name="footer">
+    <view style="font-size: 14px; margin-top: 20px;margin-bottom: 20px; color: #d4d1d1; text-align: center;">
+        <view>
+            <text>电影人</text>
+            <image style="width: 16px; height: 16px;" src="/assets/logo.png"/>
+        </view>
+        <view>
+            演员的修养
+        </view>
+    </view>
+</template>

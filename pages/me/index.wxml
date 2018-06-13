@@ -1,0 +1,54 @@
+<import src="../../vendors/zanui-weapp-2.4.6/tab/index.wxml"/>
+
+<view class="res-list">
+    <view wx:for="{{ reservationsData }}" wx:key="{{ index }}">
+        <view wx:if="{{ item.display }}">
+            <view class="zan-panel res-item" data-reservation-id="{{ item.reservationId }}" bindtap="goToResDetails">
+                <view class="zan-cell zan-cell--access">
+                    <view class="zan-cell__bd zan-font-16">{{ item.hotelName }}</view>
+                    <view class="zan-cell__ft  {{ (item.payStatusStr == '待支付') ? 'zan-c-red zan-font-bold' : '' }}">{{ item.payStatusStr }}</view>
+                </view>
+                <view class="zan-card">
+                    <view class="zan-card__thumb">
+                        <image class="zan-card__img" src="{{ item.hotelImageUrl }}" mode="scaleToFill"></image>
+                    </view>
+                    <view class="zan-card__detail">
+                        <view class="zan-card__detail-row">
+                            <view class="zan-font-16 zan-card__left-col">
+                                {{item.roomName}}
+                            </view>
+                        </view>
+                        <view class="zan-card__detail-row zan-c-gray-darker">
+                            <view class="zan-ellipsis">
+                                入住: {{ item.checkinStr }} 离店: {{ item.checkoutStr }}
+                            </view>
+                        </view>
+                        <view class="zan-card__detail-row zan-c-gray-darker">
+                            <view wx:if="{{ item.guestCount.children > 0 }}" class="zan-ellipsis">
+                                {{ item.roomCount }}间客房 {{ item.guestCount.adults }}成人, {{ item.guestCount.children }}儿童
+                            </view>
+                            <view wx:else class="zan-ellipsis">
+                                {{ item.roomCount }}间客房 {{ item.guestCount.adults }}成人
+                            </view>
+                        </view>
+                        <view class="zan-card__detail-row zan-c-gray-darker">
+                            <view wx:if="{{ 'CNY' == item.confirmCurrencyCode }}" class="zan-card__left-col zan-font-bold zan-c-red">
+                                {{ item.confirmTotalRateAfterTax }} 元
+                            </view>
+                            <view wx:else class="zan-card__left-col zan-font-bold zan-c-red">
+                                {{ item.confirmCurrencyCode }} {{ item.confirmTotalRateAfterTax }}
+                            </view>
+                            <view wx:if="{{!item.confirmCurrencyCode }}" class="zan-card__left-col zan-font-bold zan-c-red">{{ item.totalRateAfterTax }} 元</view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>
+
+
+
+
+<import src="/templates/footer.wxml"/>
+<template is="footer"/>
